@@ -42,6 +42,7 @@ jobs:
             gabriellelima1234/rotten-potatoes:latest
             gabriellelima1234/rotten-potatoes:${{ github.run_number }}
   CD:
+    needs: [CI]
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
