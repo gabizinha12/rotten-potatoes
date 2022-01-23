@@ -38,6 +38,6 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           push: true
-          tags: 
+          tags: |
             gabriellelima1234/rotten-potatoes:latest
             gabriellelima1234/rotten-potatoes:${{ github.run_number }}
