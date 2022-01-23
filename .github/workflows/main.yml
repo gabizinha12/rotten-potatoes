@@ -41,12 +41,14 @@ jobs:
           tags: |
             gabriellelima1234/rotten-potatoes:latest
             gabriellelima1234/rotten-potatoes:${{ github.run_number }}
-            CD:
-              runs-on: ubuntu-latest
-            steps:
-              - uses: actions/checkout@v2
-            - name: Kubernetes Set Context
-            uses: Azure/k8s-set-context@v2
-            with:
-            method: kubeconfig
-            kubeconfig: ${{ secrets.KUBECONFIG }}
+  CD:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v2
+        - name: Kubernetes Set Context
+          uses: Azure/k8s-set-context@v2
+          with:
+              method: kubeconfig
+              kubeconfig: ${{ secrets.KUBECONFIG }}           
+        
+              
